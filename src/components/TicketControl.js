@@ -61,7 +61,7 @@ function TicketControl() {
           const timeOpen = doc.get('timeOpen', {serverTimestamps: "estimate"}).toDate();
           const jsDate = new Date(timeOpen);
           tickets.push({
-            ... doc.data(),
+            ...doc.data(),
             id: doc.id,
             timeOpen: jsDate,
             formattedWaitTime: formatDistanceToNow(jsDate)
